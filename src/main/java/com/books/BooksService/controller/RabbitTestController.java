@@ -1,6 +1,6 @@
-package com.books.BooksService.BooksService.controller;
+package com.books.BooksService.controller;
 
-import com.books.BooksService.BooksService.service.RabbitTestService;
+import com.books.BooksService.service.RabbitTestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +18,6 @@ public class RabbitTestController {
 
     @GetMapping("/test")
     public void rabbitTest() throws NoSuchAlgorithmException, IOException, KeyManagementException, TimeoutException {
-        rabbitTestService.consumeMsg();
+        rabbitTestService.sendRequest();
     }
 }
