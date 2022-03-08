@@ -1,4 +1,4 @@
-package com.books.BooksService.BooksService.config;
+package com.books.BooksService.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

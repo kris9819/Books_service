@@ -1,13 +1,19 @@
-package com.books.BooksService.BooksService.domain;
+package com.books.BooksService.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+@Builder
 @Data
 @Entity
 @Table(name = "books", schema = "public")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,6 +28,6 @@ public class Book {
     private String publishDate;
     @Column(name = "pages", nullable = true)
     private Integer pages;
-    @Column(name = "uuid", nullable = false)
-    private String uuid;
+    @Column(name = "category", nullable = false)
+    private String category;
 }
