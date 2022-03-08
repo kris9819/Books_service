@@ -1,4 +1,4 @@
-package com.books.BooksService.BooksService;
+package com.books.BooksService;
 
 import com.rabbitmq.client.*;
 import org.junit.Assert;
